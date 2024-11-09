@@ -1,18 +1,18 @@
 # docker/nuxt.Dockerfile
-
-# Stage 1: Build
-FROM node:20 AS builder
+FROM node:20
 
 WORKDIR /app
+
+# Copy package files and install dependencies
 COPY package*.json ./
 RUN npm ci
-COPY . .
-ARG NODE_ENV=production
-RUN if [ "$NODE_ENV" = "production" ]; then npm run build; fi
 
-# Stage 2: Serve
-FROM node:20
-WORKDIR /app
-COPY --from=builder /app /app
-ENV NODE_ENV=production
-CMD ["npm", "run", "start"]
+# Copy the rest of the application
+COPY . .
+
+# Set default environment to production if not provided
+ARG NODE_ENV=production
+ENV NODE_ENV=$NODE_ENV
+
+# Only build in production mode
+RUN if [ "$NODE_ENV" = "production" ]; then npm run build; fi

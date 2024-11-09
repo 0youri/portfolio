@@ -8,7 +8,7 @@
       <span>forge</span>
       <span>}</span> 
     </NuxtLink>
-    <nav class="flex gap-10 lg:gap-5 text-lg w-full text-center">
+    <nav class="flex gap-5 text-lg w-full text-center text-clip overflow-hidden">
       <NuxtLink to="#profile" class="hover:underline">profile/</NuxtLink>
       <NuxtLink to="#skills" class="hover:underline">skills/</NuxtLink>
       <NuxtLink to="#projects" class="hover:underline">projects/</NuxtLink>

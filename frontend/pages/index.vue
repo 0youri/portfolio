@@ -4,7 +4,6 @@
       <Profile />
       <SectionSkills />
       <SectionProjects />
-      <SectionSkills />
       <SectionChallenge />
   </div>
 </template>

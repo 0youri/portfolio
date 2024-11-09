@@ -1,0 +1,18 @@
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "80:80"
+    restart: on-failure
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: ../docker/Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - "3000:3000"
+    command: sh -c "npm ci && npm run build && npm run start"  # Build and start in production mode

@@ -1,5 +1,4 @@
 services:
-
   nginx:
     image: nginx:latest
     volumes:
@@ -12,6 +11,10 @@ services:
     build:
       context: ../frontend
       dockerfile: ../docker/Dockerfile
-    restart: always
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ../frontend:/app  # Bind mount for live reloading
     ports:
       - "3000:3000"
+    command: npm run dev  # Use dev mode for hot reloading

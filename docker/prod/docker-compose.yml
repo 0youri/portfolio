@@ -6,17 +6,19 @@ services:
     ports:
       - "80:80"
     restart: on-failure
+    depends_on:
+      - frontend
 
   frontend:
     build:
-      context: ../../frontend   # Relative path to frontend directory
-      dockerfile: ../docker/Dockerfile
+      context: ../../frontend
+      dockerfile: ../docker/nuxt.Dockerfile
       args:
         NODE_ENV: production
     environment:
-      NODE_ENV: production
+      NODE_ENV: production  # Set NODE_ENV at runtime (change to development for dev mode)
     volumes:
-      - ../../frontend:/app  # Bind mount for live reloading in development
+      - ../../frontend:/app
+      - /app/node_modules  # Avoids mounting local node_modules to prevent conflicts
     ports:
       - "3000:3000"
-    command: sh -c "npm ci && npm run build && npm run start"  # Build and start in production mode

@@ -1,0 +1,20 @@
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ../nginx.conf:/etc/nginx/conf.d/default.conf  # Updated path for nginx.conf
+    ports:
+      - "80:80"
+    restart: on-failure
+
+  frontend:
+    build:
+      context: ../../frontend   # Relative path to frontend directory
+      dockerfile: ../docker/Dockerfile
+    environment:
+      NODE_ENV: development
+    volumes:
+      - ../../frontend:/app  # Bind mount for live reloading in development
+    ports:
+      - "3000:3000"
+    command: npm run dev  # Run in development mode with hot reloading

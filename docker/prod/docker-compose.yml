@@ -12,7 +12,7 @@ services:
   frontend:
     build:
       context: ../../frontend
-      dockerfile: ../docker/nuxt.Dockerfile
+      dockerfile: ../docker/Dockerfile
       args:
         NODE_ENV: production
     environment:

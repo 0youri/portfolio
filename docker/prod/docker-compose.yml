@@ -11,6 +11,8 @@ services:
     build:
       context: ../../frontend   # Relative path to frontend directory
       dockerfile: ../docker/Dockerfile
+      args:
+        NODE_ENV: production
     environment:
       NODE_ENV: production
     volumes:

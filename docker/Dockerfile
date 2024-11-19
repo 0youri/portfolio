@@ -1,17 +1,10 @@
-# docker/nuxt.Dockerfile
-FROM node:20
+# portfolio/docker/Dockerfile
+FROM nginx:latest
 
-WORKDIR /app
+WORKDIR /var/www/portfolio
 
-ARG NODE_ENV=production
-ENV NODE_ENV=$NODE_ENV
+# Copy the static build files from the frontend directory into Nginx
+COPY ./portfolio/frontend/.output/ .
 
-COPY ./portfolio/frontend/package*.json ./
-RUN npm ci --only=production  # Only production dependencies
-
-COPY ./portfolio/frontend/ .
-
-RUN if [ "$NODE_ENV" = "production" ]; then npm run build; fi
-
-# Set default command to npm start
-CMD ["npm", "start"]
+# Expose the default Nginx port
+EXPOSE 80

@@ -4,7 +4,7 @@ FROM nginx:latest
 WORKDIR /var/www/portfolio
 
 # Copy the static build files from the frontend directory into Nginx
-COPY ./portfolio/frontend/.output/ .
+COPY ./portfolio/frontend/.output/public/ .
 
 # Expose the default Nginx port
 EXPOSE 80

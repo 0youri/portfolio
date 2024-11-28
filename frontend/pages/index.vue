@@ -1,9 +1,8 @@
 <template>
-  <div class="bg-[#0C0C06] px-5 md:px-16 lg:px-48 xl:px-96">
-      <Header />
+  <div>
       <Profile />
       <SectionSkills />
-      <SectionProjects />
+      <!-- <SectionProjects /> -->
       <SectionChallenge />
   </div>
 </template>

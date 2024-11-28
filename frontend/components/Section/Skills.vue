@@ -48,8 +48,8 @@
       id: 'frameworks',
       title: 'Frameworks',
       data: [
-        { name: "Nuxt.js", level: "Intermediate" },
-        { name: "Vue.js", level: "Intermediate" },
+        { name: "Nuxt", level: "Intermediate" },
+        { name: "Vue", level: "Intermediate" },
         { name: "Tailwind CSS", level: "Intermediate" },
         { name: "Strapi", level: "Intermediate" },
         { name: "Supabase", level: "Junior" },
@@ -59,7 +59,22 @@
     {
       id: 'techTools',
       title: 'Technical Tools',
-      data: ["Git", "Docker", "Jira", "Trello", "ChatGPT Plus"]
+      data: [
+        { name: "Git", level: "Intermediate" },
+        { name: "Docker", level: "Intermediate" },
+        { name: "Jira", level: "Intermediate" },
+        { name: "Trello", level: "Intermediate" },
+      ]
+    },
+    {
+      id: 'languages',
+      title: 'Languages',
+      data: [
+        { name: "Ukrainian", level: "Native" },
+        { name: "English", level: "Proficient" },
+        { name: "French", level: "Fluent" },
+        { name: "Russian", level: "Fluent" },
+      ]
     }
   ])
   

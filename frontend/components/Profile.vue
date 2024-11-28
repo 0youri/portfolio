@@ -18,7 +18,7 @@
     <div :ref="sections.details" class="flex items-center space-x-6 opacity-0 transition-opacity duration-700 delay-300">
       <!-- Profile Image -->
       <img
-        src="../assets/img/avatar.jpeg"
+        src="../assets/img/avatar.png"
         alt="Youri Novikov"
         class="w-24 h-24 lg:w-32 lg:h-32 rounded-full border-4 border-yellow-500"
       />
@@ -26,16 +26,18 @@
       <!-- Name and Role -->
       <div>
         <h1 class="text-2xl lg:text-3xl font-bold">Youri Novikov</h1>
-        <h2 class="text-xl text-gray-300">Front-End Web Developer & Content Creator</h2>
+        <h2 class="text-xl text-gray-300">Front-End Web Developer &&nbsp;Creator</h2>
       </div>
     </div>
 
     <!-- Profile Description -->
     <p
       :ref="sections.description"
-      class="mt-6 max-w-2xl text-left text-gray-300 lg:pr-20 opacity-0 transition-opacity duration-700 delay-450"
+      class="mt-6 max-w-2xl text-left text-gray-300 text-pretty lg:pr-20 opacity-0 transition-opacity duration-700 delay-450"
     >
-      Versatile profile with technical expertise in web development and experience in project management within associative environments. Able to design and develop end-to-end web applications in Agile environments, I collaborate effectively with cross-functional teams to deliver optimized, user-centered solutions.
+      Versatile profile with technical expertise in web development and experience in project management.
+      Able to design and develop end-to-end web applications in Agile environments,
+      I collaborate effectively with cross-functional teams to deliver optimized, user-centered solutions.
     </p>
 
     <!-- Social Links -->

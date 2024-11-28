@@ -12,63 +12,60 @@
         class="border-white w-0 opacity-0 transition-all duration-700 delay-150 mb-5"
       />
   
-      <!-- Project Cards Container with Arrows -->
-      <div
-        ref="containerRef"
-        class="relative flex items-center justify-center space-x-4 opacity-0 transition-opacity duration-700 delay-300"
-      >
-        <!-- Arrow Left -->
-        <button @click="scrollLeft" aria-label="Scroll Left">
-          <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-          </svg>
-        </button>
-  
-        <!-- Projects List -->
-        <div ref="projectContainer" class="flex space-x-10 overflow-x-auto pb-6">
-          <div v-for="(project, index) in projects" :key="index" class="min-w-72 lg:min-w-64 h-40 bg-gray-400 rounded-lg flex items-center justify-center">
-            <span class="text-gray-700 font-bold">{{ project }}</span>
-          </div>
-        </div>
-  
-        <!-- Arrow Right -->
-        <button @click="scrollRight" aria-label="Scroll Right">
-          <svg class="w-10 h-10" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-          </svg>
-        </button>
-      </div>
+      <!-- Project's Carousel -->
+      <Carousel v-bind="config">
+        <Slide
+          v-for="(project,index) in projects"
+          :key="index"
+          class="bg-gray-400 rounded-lg"
+        >
+          <NuxtLink to="https://0youri.com/1app1week/rask/" class=" text-gray-700 font-bold carousel__item">{{ project }}</NuxtLink>
+        </Slide>
+
+        <template #addons>
+          <Navigation>
+            <template #next >
+              <svg class="w-20 h-20 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+            </template>
+            <template #prev>
+              <svg class="w-20 h-20 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+            </template>
+          </Navigation>
+          <Pagination class="" />
+        </template>
+      </Carousel>
+
+
+      
     </section>
   </template>
   
-  <script setup>
+<script setup>
+  import 'vue3-carousel/dist/carousel.css'
+  import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
   import { ref, onMounted } from 'vue'
-  
+
   // List of project names to iterate over
   const projects = ref([
     "Project 1", "Project 2", "Project 3", "Project 4",
     "Project 5", "Project 6", "Project 7", "Project 8"
   ])
+
+  // Config Carousel
+  const config = {
+    itemsToShow: 2.5,
+    wrapAround: true,
+    gap: 50,
+    height: 200,
+    breakpointMode: 'carousel',
+
+
+  }
   
   // References for each element
   const titleRef = ref(null)
   const lineRef = ref(null)
-  const containerRef = ref(null)
-  
-  const projectContainer = ref(null) // For scrolling
-  
-  // Scroll functions
-  const scrollLeft = () => {
-    if (projectContainer.value) {
-      projectContainer.value.scrollBy({ left: -250, behavior: 'smooth' })
-    }
-  }
-  
-  const scrollRight = () => {
-    if (projectContainer.value) {
-      projectContainer.value.scrollBy({ left: 250, behavior: 'smooth' })
-    }
-  }
+    
   
   // IntersectionObserver to trigger animations on scroll
   onMounted(() => {
@@ -91,6 +88,5 @@
     // Observe each element only if it's not null
     if (titleRef.value) observer.observe(titleRef.value)
     if (lineRef.value) observer.observe(lineRef.value)
-    if (containerRef.value) observer.observe(containerRef.value)
   })
   </script>

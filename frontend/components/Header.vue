@@ -3,10 +3,8 @@
     ref="headerRef"
     class="flex flex-col gap-5 items-center md:items-start pt-10 pb-5 lg:pt-20 lg:pb-5 text-white opacity-0 transition-opacity duration-700"
   >
-    <NuxtLink to="/" class="text-2xl lg:text-xl space-x-2">
-      <span>{</span> 
-      <span>forge</span>
-      <span>}</span> 
+    <NuxtLink to="/" class="text-2xl lg:text-xl">
+      <span>{ forge }</span> 
     </NuxtLink>
     <nav class="flex gap-5 text-lg w-full text-center text-clip overflow-hidden">
       <NuxtLink to="#profile" class="hover:underline">profile/</NuxtLink>

@@ -15,6 +15,7 @@
     "nuxt": "^3.14.159",
     "vite": "^5.4.10",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "vue3-carousel": "^0.8.1"
   }
 }

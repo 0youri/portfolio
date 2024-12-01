@@ -64,7 +64,7 @@ const projects = ref([
 ])
 
 const openLink = (link) => {
-  navigateTo(`https://0youri.com/1app1week/${link}/`)
+  navigateTo(`https://0youri.com/1app1week/${link}/`, { external: true })
 }
 
 // Config Carousel

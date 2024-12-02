@@ -1,8 +1,9 @@
 <template>
   <div>
-      <Profile />
+      <SectionNavBar />
+      <SectionProfile />
       <SectionSkills />
-      <!-- <SectionProjects /> -->
+      <SectionProjects />
       <SectionChallenge />
   </div>
 </template>

@@ -1,16 +1,15 @@
 <template>
   <header
     ref="headerRef"
-    class="flex flex-col gap-5 items-center md:items-start pt-10 pb-5 lg:pt-20 lg:pb-5 text-white opacity-0 transition-opacity duration-700"
+    class="flex flex-col gap-5 items-center pt-10 lg:pt-20 text-white opacity-0 transition-opacity duration-700"
   >
-    <NuxtLink to="/" class="text-2xl lg:text-xl">
+    <NuxtLink to="/" class="text-2xl text-center lg:text-xl">
       <span>{ forge }</span> 
     </NuxtLink>
-    <nav class="flex gap-5 text-lg w-full text-center text-clip overflow-hidden">
-      <NuxtLink to="#profile" class="hover:underline">profile/</NuxtLink>
-      <NuxtLink to="#skills" class="hover:underline">skills/</NuxtLink>
-      <NuxtLink to="#projects" class="hover:underline">projects/</NuxtLink>
-      <NuxtLink to="#challenge" class="hover:underline">challenge/</NuxtLink>
+    <nav  class="flex gap-5 text-lg w-full text-center text-clip overflow-hidden">
+        <NuxtLink to="/" class="hover:underline">home/</NuxtLink>
+        <NuxtLink to="/projects" class="hover:underline">projects/</NuxtLink>
+        <NuxtLink to="/1app1week" class="hover:underline">1app1week/</NuxtLink>
     </nav>
   </header>
 </template>

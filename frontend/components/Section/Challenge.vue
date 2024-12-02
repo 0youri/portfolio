@@ -1,12 +1,13 @@
 <template>
   <section id="challenge" class="text-white py-10">
     <!-- Projects Title -->
-    <h2
+    <div
       ref="titleRef"
-      class="text-3xl font-bold text-left opacity-0 -translate-x-10 transition-opacity transition-transform duration-700"
+      @click="navigateTo('1app1week')"
+      class="text-3xl font-bold text-left cursor-pointer opacity-0 -translate-x-10 transition-opacity transition-transform duration-700"
     >
       1 app in 1 week
-    </h2>
+    </div>
     <hr
       ref="lineRef"
       class="border-white w-0 opacity-0 transition-all duration-700 delay-150 mb-5"

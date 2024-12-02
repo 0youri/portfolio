@@ -18,7 +18,7 @@
     <div :ref="sections.details" class="flex items-center space-x-6 opacity-0 transition-opacity duration-700 delay-300">
       <!-- Profile Image -->
       <img
-        src="../assets/img/avatar.png"
+        src="/img/avatar.png"
         alt="Youri Novikov"
         class="w-24 h-24 lg:w-32 lg:h-32 rounded-full border-4 border-yellow-500"
       />

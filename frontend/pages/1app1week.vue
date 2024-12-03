@@ -11,16 +11,16 @@
       :ref="sections.line"
       class="border-white w-0 opacity-0 transition-all duration-700 delay-150 mb-5"
     />
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 w-full items-center">
         <div
             v-for="(project,index) in projects"
             :key="index"
             @click="openLink(project.link)"
-            class="bg-gray-500 w-full h-52 flex justify-center items-center rounded-3xl hover:bg-gray-400 cursor-pointer"
+            class="bg-gray-500/85 w-full h-24 flex justify-center items-center rounded-3xl hover:bg-gray-500 cursor-pointer"
         >
             <div 
-            class="text-white font-bold text-2xl"
-            target="_blank"
+                class="text-white font-bold text-2xl"
+                target="_blank"
             >
             {{ project.title }}
             </div>
@@ -35,18 +35,23 @@
 
     // List of project names to iterate over
     const projects = ref([
-    {
-        title: 'Swit 🏋️‍♂️',
-        link: 'swit'
-    },
-    {
-        title: 'Rask 🎲',
-        link: 'rask'
-    },
+        {
+            title: 'Swit 🏋️‍♂️',
+            link: 'swit'
+        },
+        {
+            title: 'Rask 🎲',
+            link: 'rask'
+        },
+        {
+            title: '🔜',
+            link: ''
+        },
     ])
 
     const openLink = (link: string) => {
-        navigateTo(`https://0youri.com/1app1week/${link}/`, { external: true })
+        if (link)
+            navigateTo(`https://0youri.com/1app1week/${link}/`, { external: true })
     }
     const sections = {
         title: ref(null),

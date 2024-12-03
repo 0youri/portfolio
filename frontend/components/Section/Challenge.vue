@@ -19,7 +19,7 @@
         v-for="(project,index) in projects"
         :key="index"
         @click="openLink(project.link)"
-        class="bg-gray-500 rounded-3xl hover:bg-gray-400 cursor-pointer"
+        class="bg-gray-500/85 rounded-3xl hover:bg-gray-500 cursor-pointer"
       >
         <div 
           class="w-full text-white font-bold text-2xl"
@@ -65,7 +65,8 @@ const projects = ref([
 ])
 
 const openLink = (link) => {
-  navigateTo(`https://0youri.com/1app1week/${link}/`, { external: true })
+  if (link)
+    navigateTo(`https://0youri.com/1app1week/${link}/`, { external: true })
 }
 
 // Config Carousel
@@ -73,17 +74,17 @@ const config = {
   itemsToShow: 1.25,
   wrapAround: true,
   gap: 50,
-  height: 200,
+  height: 130,
   breakpointMode: 'carousel',
   breakpoints: {
     400: {
-      itemsToShow: 1.5,
-    },
-    600: {
       itemsToShow: 2,
     },
+    600: {
+      itemsToShow: 3,
+    },
     800: {
-      itemsToShow: 2.5,
+      itemsToShow: 4,
     },
   },
 

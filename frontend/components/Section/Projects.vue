@@ -19,11 +19,11 @@
         v-for="(project,index) in projects"
         :key="index"
         @click="openLink(project.link)"
-        class="relative bg-cover bg-start rounded-3xl group-hover"
+        class="relative bg-cover bg-start rounded-3xl group"
         :class="!project.link || 'cursor-pointer'"
         :style="`background-image: url('img/projects/${project.img}')`"
       >
-        <div class="absolute inset-0 bg-[#0C0C06] bg-opacity-80 hover:bg-opacity-70 rounded-3xl filter backdrop-blur-xs"></div>
+        <div class="absolute inset-0 bg-[#0C0C06] bg-opacity-80 group-hover:bg-opacity-70 rounded-3xl filter backdrop-blur-xs"></div>
         <div 
             class="relative z-10 text-white text-center"
             target="_blank"

@@ -17,13 +17,13 @@
             :key="index"
             :to="project.link || undefined"
             disabled
-            class="relative disabled bg-cover bg-start w-full h-52 flex group-hover justify-center items-center rounded-3xl"
+            class="relative disabled bg-cover bg-start w-full h-52 flex group justify-center items-center rounded-3xl"
             :style="`background-image: url('img/projects/${project.img}')`"
             target="_blank"
         >
-            <div class="absolute inset-0 bg-[#0C0C06] bg-opacity-80 hover:bg-opacity-70 rounded-3xl filter backdrop-blur-xs"></div>
+            <div class="absolute inset-0 bg-[#0C0C06] bg-opacity-80 group-hover:bg-opacity-70 rounded-3xl filter backdrop-blur-xs"></div>
             <div 
-                class="relative z-10 text-white text-center "
+                class="relative z-10 text-white text-center"
                 target="_blank"
             >
                 <span v-if="!project.link" class="text-sm uppercase">No longer available</span>

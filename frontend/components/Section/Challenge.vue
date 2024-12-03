@@ -66,7 +66,7 @@ const projects = ref([
 
 const openLink = (link) => {
   if (link)
-    navigateTo(`https://0youri.com/1app1week/${link}/`, { external: true })
+    navigateTo(`https://0youri.com/1app1week/${link}/`, { external: true, open: { target: '_blank' } })
 }
 
 // Config Carousel

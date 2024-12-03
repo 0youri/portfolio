@@ -43,15 +43,11 @@
             title: 'Rask 🎲',
             link: 'rask'
         },
-        {
-            title: '🔜',
-            link: ''
-        },
     ])
 
     const openLink = (link: string) => {
         if (link)
-            navigateTo(`https://0youri.com/1app1week/${link}/`, { external: true })
+            navigateTo(`https://0youri.com/1app1week/${link}/`, { external: true, open: { target: '_blank' } })
     }
     const sections = {
         title: ref(null),

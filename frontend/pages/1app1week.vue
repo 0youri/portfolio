@@ -11,7 +11,7 @@
       :ref="sections.line"
       class="border-white w-0 opacity-0 transition-all duration-700 delay-150 mb-5"
     />
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 w-full items-center">
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-5 w-full items-center">
         <div
             v-for="(project,index) in projects"
             :key="index"

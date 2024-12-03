@@ -43,19 +43,19 @@
       // List of project names to iterate over
       const projects = ref([
         {
+            title: 'Learn Sonos',
+            tools: 'Nuxt3 & Strapi',
+            link: '',
+            img: 'learn-sonos.webp',
+            company: 'Pixel Alliance',
+        },
+        {
             title: 'CSRD WeMean',
             tools: 'Nuxt3 & Supabase',
             link: 'https://csrd-consulting.com',
             img: 'csrd.webp',
             company: 'Pixel Alliance',
 
-        },
-        {
-            title: 'Learn Sonos',
-            tools: 'Nuxt3 & Strapi',
-            link: '',
-            img: 'learn-sonos.webp',
-            company: 'Pixel Alliance',
         },
         {
             title: 'Pixel Alliance',

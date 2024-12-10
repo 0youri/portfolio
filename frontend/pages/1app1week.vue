@@ -43,6 +43,10 @@
             title: 'Rask 🎲',
             link: 'rask'
         },
+        {
+            title: 'Flick 🎬',
+            link: 'flick'
+        },
     ])
 
     const openLink = (link: string) => {

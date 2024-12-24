@@ -32,7 +32,6 @@
 
 <script lang="ts" setup>
 
-
     // List of project names to iterate over
     const projects = ref([
         {
@@ -47,6 +46,10 @@
             title: 'Flick 🎬',
             link: 'flick'
         },
+        {
+            title: 'Gamify 🎮',
+            link: 'gamify'
+        }
     ])
 
     const openLink = (link: string) => {

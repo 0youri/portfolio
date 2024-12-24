@@ -66,6 +66,10 @@ const projects = ref([
     title: 'Flick 🎬',
     link: 'flick'
   },
+  {
+    title: 'Gamify 🎮',
+    link: 'gamify'
+  }
 ])
 
 const openLink = (link) => {

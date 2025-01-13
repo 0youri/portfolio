@@ -50,10 +50,12 @@
       data: [
         { name: "Nuxt", level: "Intermediate" },
         { name: "Vue", level: "Intermediate" },
+        { name: "React", level: "Junior" },
+        { name: "Next.js", level: "Junior" },
+        { name: "Node.js", level: "Junior" },
         { name: "Tailwind CSS", level: "Intermediate" },
         { name: "Strapi", level: "Intermediate" },
         { name: "Supabase", level: "Junior" },
-        { name: "WordPress", level: "Junior" }
       ]
     },
     {

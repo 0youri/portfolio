@@ -26,7 +26,7 @@
       <!-- Name and Role -->
       <div>
         <h1 class="text-2xl lg:text-3xl font-bold">Youri Novikov</h1>
-        <h2 class="text-xl text-gray-300">Front-End Web Developer</h2>
+        <h2 class="text-xl text-gray-300">Full-Stack Web Developer</h2>
       </div>
     </div>
 

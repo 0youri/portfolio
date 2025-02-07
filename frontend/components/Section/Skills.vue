@@ -14,8 +14,8 @@
   
       <!-- Skills Content -->
       <div ref="contentRef" class="flex flex-col space-y-8 opacity-0 transition-opacity duration-700 delay-300">
-        <div v-for="section in sections" :key="section.id" class="text-left">
-          <h3 class="text-xl font-semibold mb-2">{{ section.title }}</h3>
+        <div v-for="section in skills" :key="section.id" class="text-left">
+          <h3 class="text-xl font-semibold mb-2">{{ section.name }}</h3>
           <div class="grid grid-cols-2 lg:grid-cols-3 gap-1 lg:gap-0 cursor-default">
             <div
               v-for="(subSection, index) in section.data"
@@ -35,6 +35,9 @@
   
 <script setup>
   
+  defineProps({
+    skills: Array
+  })
   const sections = ref([
     {
       id: 'prog',

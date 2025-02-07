@@ -1,18 +1,22 @@
 {
-  "name": "portfolio",
+  "name": "portfolio_frontend",
   "private": true,
   "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
+    "preview": "PORT=$PORT nuxt preview",
     "postinstall": "nuxt prepare",
     "start": "nuxt start"
   },
   "dependencies": {
+    "@nuxt/image": "^1.9.0",
+    "@nuxtjs/strapi": "^2.0.0",
     "@nuxtjs/tailwindcss": "^6.12.2",
+    "@pinia/nuxt": "^0.9.0",
     "nuxt": "^3.14.159",
+    "pinia": "^2.3.1",
     "vite": "^5.4.10",
     "vue": "latest",
     "vue-router": "latest",

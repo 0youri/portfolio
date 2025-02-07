@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_skill_skills",
+  "info": {
+    "displayName": "Template Skill",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "level": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

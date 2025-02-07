@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_skill_body_skills",
+  "info": {
+    "displayName": "Skills",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "data": {
+      "type": "component",
+      "repeatable": true,
+      "component": "skill.skill"
+    }
+  }
+}

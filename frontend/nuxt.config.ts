@@ -4,8 +4,21 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',
+    '@pinia/nuxt',
+    '@nuxtjs/strapi',
+    '@nuxt/image',
   ],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
+  },
+  image: {
+    providers: {
+      strapi: {
+        options: {
+          url: process.env.STRAPI_URL,
+        }
+      }
+    },
   }
+  
 })

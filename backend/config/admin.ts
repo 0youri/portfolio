@@ -14,10 +14,4 @@ export default ({ env }) => ({
     nps: env.bool('FLAG_NPS', true),
     promoteEE: env.bool('FLAG_PROMOTE_EE', true),
   },
-
-  url: 'https://0youri.com/test/admin',  // ✅ Ensure correct path
-  serveAdminPanel: true,
-  app: {
-    basename: '/test/admin', // ✅ Ensure correct base path
-  }
 });

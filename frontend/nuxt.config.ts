@@ -11,6 +11,9 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
   },
+  strapi: {
+    url: process.env.STRAPI_URL || 'http://localhost:1337'
+  },
   image: {
     providers: {
       strapi: {

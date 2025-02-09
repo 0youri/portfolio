@@ -4,8 +4,5 @@ export default ({ env }) => ({
   app: {
     keys: env.array('APP_KEYS'),
   },
-  url: 'https://0youri.com/backend',
-  // admin: {
-  //   url: '/backend/admin',
-  // },
+  url: env('STRAPI_SERVER_URL'),
 });

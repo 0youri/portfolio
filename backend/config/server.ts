@@ -4,5 +4,6 @@ export default ({ env }) => ({
   app: {
     keys: env.array('APP_KEYS'),
   },
-  url: env('SERVER_URL', 'https://default-url.com'),
+  // url: env('SERVER_URL', 'https://default-url.com'),
+  url: 'https://0youri.com/backend',
 });

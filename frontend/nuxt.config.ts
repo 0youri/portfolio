@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     cssPath: '~/assets/css/tailwind.css',
   },
   strapi: {
-    url: process.env.STRAPI_URL || 'http://localhost:1337'
+    url: 'https://0youri.com/backend',
   },
   image: {
     providers: {

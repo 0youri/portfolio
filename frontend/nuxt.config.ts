@@ -12,8 +12,8 @@ export default defineNuxtConfig({
     cssPath: '~/assets/css/tailwind.css',
   },
   strapi: {
-    // url: 'https://0youri.com/backend',
-    url: process.env.STRAPI_URL,
+    url: 'https://0youri.com/backend',
+    // url: process.env.STRAPI_URL,
   },
   image: {
     providers: {

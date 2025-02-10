@@ -43,7 +43,7 @@
       class="mt-8 flex space-x-5 items-center opacity-0 transition-opacity duration-700 delay-600"
     >
       <NuxtLink v-for="social in socialPlatforms" :key="social.name" :to="social.link" target="_blank" class="flex flex-col gap-1 items-center group">
-        <NuxtImg provider="strapi" class="group-hover:opacity-75" :src="getImgUrl(social.logo)" alt="LinkedIn" width="50" height="50" />
+        <NuxtImg provider="strapi" class="group-hover:opacity-75" :src="social.logo.url" alt="LinkedIn" width="50" height="50" />
         <span class="text-sm text-white group-hover:text-white/75">{{ social.name }}</span>
       </NuxtLink>
     </div>
@@ -89,7 +89,5 @@
     Object.values(sections).forEach((el) => observer.observe(el.value))
   })
 
-  const getImgUrl = (el) => {
-    return el.hash + el.ext
-  }
+
 </script>

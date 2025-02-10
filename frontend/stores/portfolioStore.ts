@@ -31,6 +31,9 @@ export const usePortfolioStore = defineStore("portfolioStore", () => {
     async function getPortfolio() {
         const { data } = await find<Portfolio>("portfolios", {
             populate: {
+                avatar: {
+                    populate: "*"
+                },
                 socialPlatforms: {
                     populate: "*"
                 },

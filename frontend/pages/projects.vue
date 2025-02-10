@@ -27,7 +27,7 @@
                 class="relative z-10 text-white text-center"
                 target="_blank"
             >
-                <span v-if="!project.link" class="text-sm uppercase">No longer available</span>
+                <span v-if="!project.link" class="text-sm uppercase">No available</span>
                 <p class="font-bold text-3xl">{{ project.name }}</p>
                 <p class="font-medium text-md">{{ project.tools }}</p>
                 <p v-if="project.company" class="text-xs italic">Created while at {{ project.company }}</p>

@@ -11,6 +11,11 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
   },
+  app: {
+    head: {
+      title: "YN Portfolio",
+    }
+  },
   strapi: {
     url: process.env.STRAPI_URL,
   },

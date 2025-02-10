@@ -16,7 +16,7 @@ export default defineNuxtConfig({
       STRAPI_URL: process.env.STRAPI_URL || 'http://localhost:1337',
       STRAPI_IMAGE_URL: process.env.STRAPI_IMAGE_URL || 'http://localhost:1337/uploads'
     }
-  }
+  },
   strapi: {
     // url: 'https://0youri.com/backend',
     url: process.env.STRAPI_URL,

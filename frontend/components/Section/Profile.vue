@@ -17,9 +17,10 @@
     <!-- Profile Details -->
     <div :ref="sections.details" class="flex items-center space-x-6 opacity-0 transition-opacity duration-700 delay-300">
       <!-- Profile Image -->
-      <img
-        src="/img/avatar.png"
-        alt="Youri Novikov"
+      <NuxtImg
+        provider="strapi"
+        :src="social.avatar.url"
+        alt="Avatar"
         class="w-24 h-24 lg:w-32 lg:h-32 rounded-full border-4 border-yellow-500"
       />
 
@@ -43,8 +44,8 @@
       class="mt-8 flex space-x-5 items-center opacity-0 transition-opacity duration-700 delay-600"
     >
       <NuxtLink v-for="social in socialPlatforms" :key="social.name" :to="social.link" target="_blank" class="flex flex-col gap-1 items-center group">
-        <NuxtImg provider="strapi" class="group-hover:opacity-75" :src="social.logo.url" alt="LinkedIn" width="50" height="50" />
-        <span class="text-sm text-white group-hover:text-white/75">{{ social.name }}</span>
+        <NuxtImg provider="strapi" class="group-hover:opacity-75" :src="social.logo.url" :alt="social.name" width="50" height="50" />
+        <span class="text-sm text-white group-hover:text-white/75 mt-1">{{ social.name }}</span>
       </NuxtLink>
     </div>
   </section>

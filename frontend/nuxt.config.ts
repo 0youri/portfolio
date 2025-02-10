@@ -11,6 +11,12 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
   },
+  runtimeConfig: {
+    public: {
+      STRAPI_URL: process.env.STRAPI_URL || 'http://localhost:1337',
+      STRAPI_IMAGE_URL: process.env.STRAPI_IMAGE_URL || 'http://localhost:1337/uploads'
+    }
+  },
   strapi: {
     // url: 'https://0youri.com/backend',
     url: process.env.STRAPI_URL,
@@ -24,18 +30,5 @@ export default defineNuxtConfig({
         }
       }
     },
-  }
-  
+  }  
 })
-
-
-// providers: {
-//   myProvider: {
-//     name: 'myProvider', // optional value to overrider provider name
-//     provider: '~/providers/my-provider.ts', // Path to custom provider
-//     options: {
-//       // ... provider options
-//       baseURL: "https://site.com"
-//     }
-//   }
-// }

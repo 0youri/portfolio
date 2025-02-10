@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     providers: {
       strapi: {
         options: {
-          url: process.env.STRAPI_URL,
+          url: 'https://0youri.com/backend',
         }
       }
     },

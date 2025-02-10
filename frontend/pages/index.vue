@@ -5,6 +5,7 @@
         :name="portfolio.username"
         :position="portfolio.position"
         :description="portfolio.description"
+        :avatar="portfolio.avatar.url"
         :socialPlatforms="portfolio.socialPlatforms"
       />
       <SectionSkills 

@@ -19,7 +19,7 @@
       <!-- Profile Image -->
       <NuxtImg
         provider="strapi"
-        :src="social.avatar.url"
+        :src="avatar"
         alt="Avatar"
         class="w-24 h-24 lg:w-32 lg:h-32 rounded-full border-4 border-yellow-500"
       />
@@ -59,6 +59,7 @@
     name: String,
     position: String,
     description: String,
+    avatar: String,
     socialPlatforms: Array
   })
 

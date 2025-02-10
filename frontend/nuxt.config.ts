@@ -18,10 +18,22 @@ export default defineNuxtConfig({
     providers: {
       strapi: {
         options: {
-          url: 'https://0youri.com/backend',
+          baseURL: 'https://0youri.com/backend',
         }
       }
     },
   }
   
 })
+
+
+// providers: {
+//   myProvider: {
+//     name: 'myProvider', // optional value to overrider provider name
+//     provider: '~/providers/my-provider.ts', // Path to custom provider
+//     options: {
+//       // ... provider options
+//       baseURL: "https://site.com"
+//     }
+//   }
+// }

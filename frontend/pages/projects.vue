@@ -17,7 +17,7 @@
             :key="index"
             :to="project.link || undefined"
             disabled
-            class="relative disabled bg-cover bg-start w-full h-52 flex group justify-center items-center rounded-3xl"
+            class="relative disabled bg-cover bg-center w-full h-52 flex group justify-center items-center rounded-3xl"
             :style="project.background ? `background-image: url('${getImgUrl(project.background)}')` : ''"
             target="_blank"
         >

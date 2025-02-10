@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     providers: {
       strapi: {
         options: {
-          baseURL: process.env.STRAPI_IMAGE_URL,
+          baseURL: process.env.STRAPI_URL,
         }
       }
     },

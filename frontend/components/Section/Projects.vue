@@ -18,7 +18,7 @@
         v-for="(project,index) in projects"
         :key="index"
         @click="openLink(project.link)"
-        class="relative bg-cover bg-start rounded-3xl group"
+        class="relative bg-cover bg-center rounded-3xl group"
         :class="!project.link || 'cursor-pointer'"
         :style="project.background ? `background-image: url('${getImgUrl(project.background)}')` : ''"
       >

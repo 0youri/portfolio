@@ -1,0 +1,55 @@
+services:
+  portfolio_frontend:
+    image: portfolio_frontend
+    container_name: portfolio_frontend
+    env_file: .env.frontend
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+      args:
+        ENV_FILE: .env.frontend 
+    ports:
+      - 3000:3000
+    networks:
+      - nginx_network
+
+  portfolio_backend:
+    image: portfolio_backend
+    container_name: portfolio_backend
+    env_file: .env.backend
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+      args:
+        ENV_FILE: .env.backend 
+    depends_on:
+      - portfolio_db
+    ports:
+      - 4000:4000
+    networks:
+      - portfolio-network
+      - nginx_network
+
+  portfolio_db:
+    image: postgres:latest
+    container_name: portfolio_db
+    restart: always
+    env_file: .env.db
+    volumes:
+      - portfolio_data:/var/lib/postgresql/data
+    networks:
+      - portfolio-network
+
+volumes:
+  portfolio_data:
+    name: portfolio_data
+
+networks:
+  portfolio-network:
+    name: portfolio-network
+    driver: bridge
+    internal: true
+  nginx_network:
+    external: true 
+
+  

@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_project_projects",
+  "info": {
+    "displayName": "Project",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "tools": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string"
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "company": {
+      "type": "string"
+    },
+    "github": {
+      "type": "string"
+    }
+  }
+}

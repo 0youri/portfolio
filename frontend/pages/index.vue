@@ -1,6 +1,6 @@
 <template>
   <div v-if="portfolio" class="text-white">
-      <SectionNavBar />
+      <!-- <SectionNavBar /> -->
       <SectionProfile 
         :name="portfolio.username"
         :position="portfolio.position"

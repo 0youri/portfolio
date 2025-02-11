@@ -16,7 +16,7 @@
       <div ref="contentRef" class="flex flex-col space-y-8 opacity-0 transition-opacity duration-700 delay-300">
         <div v-for="section in skills" :key="section.id" class="text-left">
           <h3 class="text-xl font-semibold mb-2">{{ section.name }}</h3>
-          <div class="grid grid-cols-2 lg:grid-cols-3 gap-1 lg:gap-0 cursor-default">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-0 cursor-default">
             <div
               v-for="(subSection, index) in section.data"
               :key="index"
@@ -87,7 +87,7 @@
   const titleRef = ref(null)
   const lineRef = ref(null)
   const contentRef = ref(null)
-  
+
   onMounted(() => {
     // Ensure all elements are defined
     if (titleRef.value && lineRef.value && contentRef.value) {

@@ -5,5 +5,4 @@ export default ({ env }) => ({
     keys: env.array('APP_KEYS'),
   },
   url: env('PUBLIC_URL', 'http://localhost:1337'),
-  // url: 'https://0youri.com/backend',
 });

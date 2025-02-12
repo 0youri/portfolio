@@ -8,7 +8,7 @@ WORKDIR /frontend
 ARG ENV_FILE
 
 # Copy all frontend files
-COPY apps/portfolio/frontend .
+COPY frontend .
 
 # Copy the .env file
 COPY ${ENV_FILE} .env

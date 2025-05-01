@@ -1,7 +1,7 @@
 <template>
-  <div class="font-sans">
+  <UApp class="font-sans">
     <NuxtLayout>
       <NuxtPage/>
     </NuxtLayout>
-  </div>
+  </UApp>
 </template>

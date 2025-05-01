@@ -1,116 +1,51 @@
 <template>
-    <section id="skills" class="text-white py-10">
-      <!-- Skills Title -->
-      <h2
-        ref="titleRef"
-        class="text-3xl font-bold text-left opacity-0 -translate-x-10 transition-opacity transition-transform duration-700"
-      >
-        Skills
-      </h2>
-      <hr
-        ref="lineRef"
-        class="border-white w-0 opacity-0 transition-all duration-700 delay-150 mb-5 mt-2"
-      />
-  
-      <!-- Skills Content -->
-      <div ref="contentRef" class="flex flex-col space-y-8 opacity-0 transition-opacity duration-700 delay-300">
-        <div v-for="section in skills" :key="section.id" class="text-left">
-          <h3 class="text-xl font-semibold mb-2">{{ section.name }}</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-1 lg:gap-0 cursor-default">
-            <div
+    <section class="w-full sm:w-auto">
+      <!-- Skills Content -->       
+      <div class="grid grid-cols-1 gap-5 lg:gap-10">
+        <UCard
+          v-for="section in skills"
+          :key="section.id"
+          variant="soft"
+          class="transition-transform duration-300 hover:scale-[1.03]"
+        >
+          <template #header>
+            <h3
+              class="text-lg items-center flex gap-2"
+              :class="section.name === 'Core Skills' ? 'font-extrabold' : 'font-semibold'"
+            >
+              <UIcon v-if="section.name === 'Core Skills'" name="pajamas:star" class="size-5" />
+              <UIcon v-if="section.name === 'Complementary Skills'" name="pajamas:plus" class="size-5" />
+              <UIcon v-if="section.name === 'Languages'" name="lucide:languages" class="size-5" />
+              <!-- <UIcon :name="section.icon" class="size-5" /> -->
+
+              <span>{{ section.name }}</span>
+            </h3>
+          </template>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 lg:gap-5 justify-center "
+          >
+            <UButton
               v-for="(subSection, index) in section.data"
               :key="index"
-              class="flex items-center space-x-2"
+              color="neutral" variant="soft" size="xl"
+              class="flex flex-col justify-center items-center gap-0 px-5 transition-transform duration-300 hover:scale-[1.03]"  
             >
-              <span class="text-lg font-medium text-gray-300 hover:text-gray-200 hover:underline">
+            
+              <span class="text-md font-medium ">
                 {{ typeof subSection === 'string' ? subSection : subSection.name }}
               </span>
-              <span v-if="subSection.level" class="text-sm text-gray-500">{{ subSection.level }}</span>
-            </div>
+              <!-- <span v-if="subSection.level" class="text-xs text-gray-500">{{ subSection.level }}</span> -->
+              <span v-if="subSection.level && section.name === 'Languages'" class="text-xs text-gray-500">{{ subSection.level }}</span>
+            </UButton>
           </div>
-        </div>
+        </UCard>
       </div>
     </section>
   </template>
   
-<script setup>
+<script setup lang="ts">
   
   defineProps({
     skills: Array
   })
-  const sections = ref([
-    {
-      id: 'prog',
-      title: 'Programming languages',
-      data: [
-        { name: "JavaScript", level: "Advanced" },
-        { name: "TypeScript", level: "Intermediate" }
-      ]
-    },
-    {
-      id: 'frameworks',
-      title: 'Frameworks',
-      data: [
-        { name: "Nuxt", level: "Intermediate" },
-        { name: "Vue", level: "Intermediate" },
-        { name: "React", level: "Junior" },
-        { name: "Next.js", level: "Junior" },
-        { name: "Node.js", level: "Junior" },
-        { name: "Tailwind CSS", level: "Intermediate" },
-        { name: "Strapi", level: "Intermediate" },
-        { name: "Supabase", level: "Junior" },
-      ]
-    },
-    {
-      id: 'techTools',
-      title: 'Technical Tools',
-      data: [
-        { name: "Git", level: "Intermediate" },
-        { name: "Docker", level: "Intermediate" },
-        { name: "Jira", level: "Intermediate" },
-        { name: "Trello", level: "Intermediate" },
-      ]
-    },
-    {
-      id: 'languages',
-      title: 'Languages',
-      data: [
-        { name: "Ukrainian", level: "Native" },
-        { name: "English", level: "Proficient" },
-        { name: "French", level: "Fluent" },
-        { name: "Russian", level: "Fluent" },
-      ]
-    }
-  ])
-  
-  // References to each element
-  const titleRef = ref(null)
-  const lineRef = ref(null)
-  const contentRef = ref(null)
-
-  onMounted(() => {
-    // Ensure all elements are defined
-    if (titleRef.value && lineRef.value && contentRef.value) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (entry.target === lineRef.value) {
-                entry.target.classList.remove('w-0')
-                entry.target.classList.add('w-1/2', 'lg:w-1/3', 'opacity-100')
-            } else {
-                entry.target.classList.add('opacity-100', 'translate-x-0', 'translate-y-0')
-            }
-            observer.unobserve(entry.target)
-          }
-        })
-      }, { threshold: 0.1 })
-  
-      // Observe each element individually
-      observer.observe(titleRef.value)
-      observer.observe(lineRef.value)
-      observer.observe(contentRef.value)
-    } else {
-      console.warn("One or more elements are not defined.")
-    }
-  })
-  </script>
+   
+</script>

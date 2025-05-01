@@ -1,5 +1,5 @@
 <template>
-  <div v-if="portfolio" class="text-white">
+  <div v-if="portfolio" class="flex flex-col items-center justify-center gap-5">
       <!-- <SectionNavBar /> -->
       <SectionProfile 
         :name="portfolio.username"
@@ -12,10 +12,10 @@
         v-if="portfolio.skills.length > 0"
         :skills="portfolio.skills"
       />
-      <SectionProjects
+      <!-- <SectionProjects
         v-if="portfolio.projects.length > 0"
         :projects="portfolio.projects"
-      />
+      /> -->
   </div>
 </template>
 

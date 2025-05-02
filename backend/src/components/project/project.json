@@ -10,26 +10,32 @@
       "type": "string",
       "required": true
     },
-    "tools": {
-      "type": "string",
-      "required": true
-    },
     "link": {
       "type": "string"
-    },
-    "background": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
     },
     "company": {
       "type": "string"
     },
     "github": {
       "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "pictures": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tools": {
+      "type": "component",
+      "repeatable": true,
+      "component": "section.section",
+      "required": true,
+      "min": 1
     }
   }
 }

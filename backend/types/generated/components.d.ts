@@ -7,12 +7,20 @@ export interface ProjectProject extends Struct.ComponentSchema {
     displayName: 'Project';
   };
   attributes: {
-    background: Schema.Attribute.Media<'images'>;
     company: Schema.Attribute.String;
+    description: Schema.Attribute.Text;
     github: Schema.Attribute.String;
     link: Schema.Attribute.String;
     name: Schema.Attribute.String & Schema.Attribute.Required;
-    tools: Schema.Attribute.String & Schema.Attribute.Required;
+    pictures: Schema.Attribute.Media<'images', true>;
+    tools: Schema.Attribute.Component<'section.section', true> &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
   };
 }
 
@@ -35,6 +43,7 @@ export interface SkillBodySkill extends Struct.ComponentSchema {
   };
   attributes: {
     data: Schema.Attribute.Component<'skill.skill', true>;
+    icon: Schema.Attribute.String;
     name: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -46,7 +55,7 @@ export interface SkillSkill extends Struct.ComponentSchema {
     displayName: 'Template Skill';
   };
   attributes: {
-    level: Schema.Attribute.String & Schema.Attribute.Required;
+    level: Schema.Attribute.String;
     name: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
@@ -54,11 +63,12 @@ export interface SkillSkill extends Struct.ComponentSchema {
 export interface SocialMediaSocialMedia extends Struct.ComponentSchema {
   collectionName: 'components_social_media_social_medias';
   info: {
+    description: '';
     displayName: 'Social Media';
   };
   attributes: {
+    icon: Schema.Attribute.String & Schema.Attribute.Required;
     link: Schema.Attribute.String & Schema.Attribute.Required;
-    logo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
     name: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }

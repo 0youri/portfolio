@@ -43,8 +43,7 @@
         class="flex flex-col items-center group transition-transform duration-300 hover:scale-[1.03]"
         
       >
-        <!-- <UIcon :name="social.icon" class="size-15 group-hover:text-white/75" /> -->
-        <UIcon :name="social.name === 'LinkedIn' ?'mdi:linkedin' : 'mdi:github-box'" class="size-15 group-hover:text-white/75" />
+        <UIcon :name="social.icon" class="size-15 group-hover:text-white/75" />
       </NuxtLink>
     </div>
   </section>

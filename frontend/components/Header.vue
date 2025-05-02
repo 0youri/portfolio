@@ -4,8 +4,8 @@
       bg-slate-900/25 border-slate-800"
   >
     <UContainer class="flex flex-col items-center justify-between gap-2">
-      <NuxtLink v-if="portfolio" to="/" class="text-2xl text-center lg:text-xl hover:opacity-75 transition-transform duration-300 hover:scale-[1.03]">
-        <span>{{ portfolio.header }}</span> 
+      <NuxtLink to="/" class="text-2xl text-center lg:text-xl hover:opacity-75 transition-transform duration-300 hover:scale-[1.03]">
+        <span>{ portfolio }</span> 
       </NuxtLink>
       <nav class="flex gap-5 text-lg w-full justify-center text-clip overflow-hidden container">
           <NuxtLink to="/" class="hover:opacity-75 transition-transform duration-300 hover:scale-[1.03]">home/</NuxtLink>

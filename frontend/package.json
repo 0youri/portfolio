@@ -23,7 +23,6 @@
     "tailwindcss": "^4.1.4",
     "vite": "^5.4.10",
     "vue": "latest",
-    "vue-router": "latest",
-    "vue3-carousel": "^0.8.1"
+    "vue-router": "latest"
   }
 }

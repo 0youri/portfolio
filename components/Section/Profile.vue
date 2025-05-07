@@ -5,6 +5,7 @@
       <!-- Profile Image -->
       <NuxtImg
         :src="avatar"
+        loading="lazy"
         alt="Avatar"
         width="160"
         height="160"
@@ -20,7 +21,7 @@
 
     <!-- Profile Description -->
     <p
-      class="min-h-[3rem] max-w-5xl text-center text-md lg:text-lg font-medium text-gray-300 text-pretty"
+      class="w-full md:max-w-3xl lg:max-w-5xl text-center text-base md:text-lg font-medium text-gray-300 text-pretty"
     >
       {{ description }}
     </p>
@@ -45,8 +46,6 @@
 </template>
 
 <script setup lang="ts">
-
-  import { NuxtImg } from '#components';
   import type { Social } from '~/types/profile'
 
   defineProps<{

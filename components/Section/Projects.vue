@@ -9,12 +9,15 @@
       :ui="{
         item: 'basis-full'
       }"
-      class="mx-auto w-md sm:w-sm" 
+      class="mx-auto w-sm " 
     >
-      <div
-        class="relative bg-cover bg-center group min-h-52 rounded-3xl"
-        :style="{ backgroundImage: `url('${item.picture}')` }"
-      >
+      <div class="relative group min-h-52 rounded-3xl overflow-hidden">
+        <NuxtImg
+          :src="item.picture"
+          alt="Project image"
+          loading="lazy"
+          class="absolute inset-0 w-full h-full object-cover z-0 rounded-3xl"
+        />
         <div class="absolute inset-0 bg-black/80 z-0 rounded-3xl"></div>
           <div class="absolute inset-0 z-10 flex flex-col items-center text-white text-center w-full h-full py-2">
             <div class="flex-1">

@@ -3,9 +3,7 @@
         <h1 class="text-3xl font-bold">
             Projects
         </h1>
-        <div
-            class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-10"
-        >
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
             <UCard
                 v-for="project in sortedProjects"
                 :key="project.rank"
@@ -23,6 +21,7 @@
                         <NuxtImg
                             :src="project.picture"
                             alt="Project preview"
+                            loading="lazy"
                             class="w-full h-48 object-cover rounded-lg"
                         />
                         <p v-if="project.company" class="text-xs font-semibold text-right opacity-50">done at {{ project.company }}</p>

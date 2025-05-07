@@ -1,0 +1,72 @@
+[
+    {
+        "rank": 1,
+        "name": "Learn Sonos",
+        "link": null,
+        "github": null,
+        "description": "Multilingual website for Sonos, developed to support their expansion into Eastern & Northern Europe and the Middle East. Built with Nuxt2 and migrated to Nuxt3, the site displays all Sonos products using Strapi as the CMS and integrates Localazy to manage translations across multiple languages.",
+        "picture": "/img/projects/learn-sonos.webp",
+        "tools": ["Nuxt3", "Strapi", "TailwindCSS", "Pinia", "Nuxt2 (v1)", "Localazy"],
+        "company": "Pixel Alliance"
+    },
+    {
+        "rank": 2,
+        "name": "EVA Knowledge Platform",
+        "link": null,
+        "github": null,
+        "description": "Knowledge platform for Amaris Consulting (Mantu Group, Life Sciences division), built with Nuxt3 and Strapi. It centralizes information on various diseases along with related challenges, which correspond to ongoing or completed projects. For each project, the platform gathers all relevant materials, including articles, documents, and reports.",
+        "picture": "/img/projects/eva.webp",
+        "tools": ["Nuxt3", "Strapi", "TailwindCSS", "Pinia"],
+        "company": "Pixel Alliance"
+    },
+    {
+        "rank": 5,
+        "name": "CSRD WeMean",
+        "link": "https://csrd-consulting.com",
+        "github": null,
+        "description": "Website for WeMean, a Mantu group company, built to showcase their expertise in the upcoming CSRD (Corporate Sustainability Reporting Directive). Developed with Nuxt3 and Supabase, the site features a directory where users can check a company’s eligibility for CSRD by entering its name and reach out for support if needed.",
+        "picture": "/img/projects/csrd-wemean.webp",
+        "tools": ["Nuxt3", "Supabase", "TailwindCSS", "Pinia"],
+        "company": "Pixel Alliance"
+    },
+    {
+        "rank": 6,
+        "name": "WBCSD",
+        "link": "https://www.wbcsd.org",
+        "github": null,
+        "description": "Contributed to a full redesign of the main website for the World Business Council for Sustainable Development (WBCSD), a Geneva-based organization uniting 190 international companies around sustainable development. The goal was to modernize the site to boost its appeal and engagement, building on its existing daily traffic of thousands of visitors.",
+        "picture": "/img/projects/wbcsd.webp",
+        "tools": ["WordPress", "Gutenberg", "Elementor"],
+        "company": "Pixel Alliance"
+    },
+    {
+        "rank": 4,
+        "name": "Forge",
+        "link": null,
+        "github": "https://github.com/0youri/forge",
+        "description": "Forge is a powerful and intuitive workout tracking app that helps you log exercises, track workout progress, and analyze performance over time. Designed for efficiency and performance tracking, Forge enables you to store workout data, monitor exercise history, and optimize training for strength and hypertrophy.",
+        "picture": "/img/projects/forge.webp",
+        "tools": ["Nuxt3", "Strapi", "TailwindCSS", "Pinia", "Docker"],
+        "company": null
+    },
+    {
+        "rank": 3,
+        "name": "Huntro",
+        "link": "https://huntro.netlify.app",
+        "github": "https://github.com/0youri/huntro",
+        "description": "Huntro is a simple and efficient job board built with Nuxt 3, Supabase, and Groq AI to help you save, manage, and track your job applications in one place, offering a clean and fast experience throughout your job hunt.",
+        "picture": "/img/projects/huntro.webp",
+        "tools": ["Nuxt3", "Supabase", "Groq AI", "Netlify", "TailwindCSS", "Nuxt UI","Pinia"],
+        "company": null
+    },
+    {
+        "rank": 7,
+        "name": "Attendify",
+        "link": null,
+        "github": "https://github.com/0youri/attendify",
+        "description": "Attendify is a minimalistic attendance tracking app that allows users to load data from Google Sheets, select columns to keep, and track attendance dynamically.",
+        "picture": "/img/projects/attendify.webp",
+        "tools": ["React", "TailwindCSS"],
+        "company": null
+    }
+]

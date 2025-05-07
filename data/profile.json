@@ -1,0 +1,18 @@
+{
+    "name": "Youri Novikov",
+    "position": "Front-End / Full-Stack Developer",
+    "avatar": "/img/avatar.webp",
+    "description": "Product-oriented developer, I design, develop, and optimize digital solutions focused on user experience (UX) and user interface (UI). With over 2 years of experience in web development and 3 years in project management, I am proficient in the entire product lifecycle, from understanding business needs to delivery. I am used to collaborating in Agile environments with cross-functional and international teams, both on-site and remote.",
+    "socials": [
+        {
+            "name": "LinkedIn",
+            "link": "https://www.linkedin.com/in/0youri/",
+            "icon": "mdi:linkedin"
+        },
+        {
+            "name": "Github",
+            "link": "https://www.github.com/0youri",
+            "icon": "mdi:github-box"
+        }
+    ]
+}

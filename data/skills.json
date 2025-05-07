@@ -1,0 +1,89 @@
+[
+    {
+        "name": "Core Skills",
+        "icon": "pajamas:star",
+        "data": [
+            {
+                "name": "Vue"
+            },
+            {
+                "name": "Nuxt"
+            },
+            {
+                "name": "TypeScript"
+            },
+            {
+                "name": "JavaScript"
+            },
+            {
+                "name": "TailwindCSS"
+            },
+            {
+                "name": "Strapi"
+            },
+            {
+                "name": "Supabase"
+            }
+        ]
+    },
+    {
+        "name": "Complementary Skills",
+        "icon": "pajamas:plus",
+        "data": [
+            {
+                "name": "API REST"
+            },
+            {
+                "name": "React"
+            },
+            {
+                "name": "Next"
+            },
+            
+            {
+                "name": "Nuxt UI"
+            },
+            {
+                "name": "Docker"
+            },
+            {
+                "name": "WordPress"
+            },
+            {
+                "name": "Git"
+            },
+            
+            {
+                "name": "nginx"
+            },
+            {
+                "name": "Digital Ocean"
+            },
+            {
+                "name": "Netlify"
+            }
+        ]
+    },
+    {
+        "name": "Languages",
+        "icon": "lucide:languages",
+        "data": [
+            {
+                "name": "Ukrainian",
+                "level": "Native"
+            },
+            {
+                "name": "English",
+                "level": "Proficient"
+            },
+            {
+                "name": "French",
+                "level": "Fluent"
+            },
+            {
+                "name": "Russian",
+                "level": "Fluent"
+            }
+        ]
+    }
+]

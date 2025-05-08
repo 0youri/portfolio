@@ -11,15 +11,11 @@
         :skills="skills"
       />
       <SectionProjects
-        :projects="projects"
       />
   </div>
 </template>
 
 <script lang="ts" setup>
   import profile from '~/data/profile.json'
-  import skills from '~/data/skills.json'
-  import projects from '~/data/projects.json'
-
-  
+  import skills from '~/data/skills.json'  
 </script>

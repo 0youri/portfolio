@@ -6,15 +6,13 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxt/fonts',
-    '@nuxt/icon'
+    '@nuxt/icon',
+    '@nuxtjs/i18n'
   ],
   css: ['~/assets/css/main.css'],
   app: {
     head: {
       title: "YN Portfolio",
     }
-  },
-  build: {
-    analyze: true
   }
 })

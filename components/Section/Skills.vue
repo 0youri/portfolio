@@ -1,5 +1,8 @@
 <template>
-    <section class="w-full sm:w-auto">
+    <section class="w-full sm:w-auto space-y-5">
+      <h1 class="text-3xl font-bold text-center">
+        Skills
+      </h1>
       <!-- Skills Content -->       
       <div class="grid grid-cols-1 gap-5 lg:gap-10">
         <UCard

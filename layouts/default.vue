@@ -1,9 +1,9 @@
 <template>
   <div>
     <Header />
-      <UContainer class="min-h-dvh">
-        <slot />
-      </UContainer>
+    <UContainer class="min-h-dvh">
+      <slot />
+    </UContainer>
   </div>
 </template>
 

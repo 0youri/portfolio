@@ -58,15 +58,5 @@
         "picture": "/img/projects/huntro.webp",
         "tools": ["Nuxt3", "Supabase", "Groq AI", "Netlify", "TailwindCSS", "Nuxt UI","Pinia"],
         "company": null
-    },
-    {
-        "rank": 7,
-        "name": "Attendify",
-        "link": null,
-        "github": "https://github.com/0youri/attendify",
-        "description": "Attendify is a minimalistic attendance tracking app that allows users to load data from Google Sheets, select columns to keep, and track attendance dynamically.",
-        "picture": "/img/projects/attendify.webp",
-        "tools": ["React", "TailwindCSS"],
-        "company": null
     }
 ]

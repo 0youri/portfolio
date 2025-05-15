@@ -18,14 +18,16 @@
 
               <div class="flex flex-col gap-5 h-full w-full">
                   <div class="flex flex-col gap-1">
-                      <NuxtImg
-                          :src="project.picture"
-                          alt="Project preview"
-                          loading="lazy"
-                          class="w-full h-48 object-cover rounded-lg"
-                      />
-                      <p v-if="project.company" class="text-xs font-semibold text-right opacity-50">done at {{ project.company }}</p>
-                  </div>
+                    <NuxtImg
+                        :src="project.picture"
+                        alt="Project preview"
+                        loading="lazy"
+                        class="w-full h-48 object-cover rounded-lg"
+                    />
+                    <div class="h-2">
+                        <p v-if="project.company" class="text-xs font-semibold text-right opacity-50">done at {{ project.company }}</p>
+                    </div>
+                </div>
 
                   <div class="grid grid-cols-3 gap-2 uppercase">
                       <UBadge
@@ -54,7 +56,7 @@
                                   <div class="grid grid-cols-3 gap-2 uppercase">
                                       <UBadge
                                       v-for="tool in project.tools"
-                                      color="neutral" variant="soft" size="sm"
+                                      color="neutral" variant="soft" size="lg"
                                       class="font-bold justify-center py-1.5"
                                       >
                                       {{ tool }}
